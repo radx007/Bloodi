@@ -16,11 +16,8 @@ class _IntroductionScreenState extends State<IntroductionScreen> {
   bool isLastPage = false;
   int currentPageIndex = 0;
 
-  
-
   @override
   void dispose() {
-    
     controller.dispose();
     super.dispose();
   }
@@ -35,14 +32,8 @@ class _IntroductionScreenState extends State<IntroductionScreen> {
       body: Column(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
-          Container(
-            // color: Colors.red,
-            height: screenSize.height * .8 - padding.bottom - padding.top,
-            padding: EdgeInsets.only(
-              top: padding.top,
-              // right: 15,
-              // left: 15,
-            ),
+          SizedBox(         
+            height: screenSize.height * .75  ,
 
             child: PageView.builder(
               controller: controller,
@@ -59,24 +50,24 @@ class _IntroductionScreenState extends State<IntroductionScreen> {
                 switch (index) {
                   case 0:
                     return const IntroductionPage(
-                      imageUrl: 'assets/images/team-amico.svg',
-                      title: 'Discover Donor Based On Blood Type',
+                      imageUrl: 'assets/images/Blood-donation.png',
+                      title: 'Easy Donor Search',
                       subTitle:
-                          'Lorem Ipsum is simply dummy text of the printing and typesetting',
+                          'Easy to find available donors nearby. Verified donors willing to help',
                     );
                   case 1:
                     return const IntroductionPage(
-                      imageUrl: 'assets/images/building-bro.svg',
-                      title: 'Real-Time Donor Availability',
+                      imageUrl: 'assets/images/Directions.png',
+                      title: 'Track Your Donor',
                       subTitle:
-                          'Lorem Ipsum is simply dummy text of the printing and typesetting',
+                          'You can track tour donor\'s location and send them necessary informatioon to reach the destination properly ',
                     );
                   case 2:
                     return const IntroductionPage(
-                      imageUrl: 'assets/images/donation-bro.svg',
-                      title: 'Locate Donors Around You',
+                      imageUrl: 'assets/images/Hospital.png',
+                      title: 'Emergency Subscription',
                       subTitle:
-                          'Lorem Ipsum is simply dummy text of the printing and typesetting',
+                          'In case of emergency, you can find paid donors who are active 24/7',
                     );
 
                   default:
@@ -87,7 +78,7 @@ class _IntroductionScreenState extends State<IntroductionScreen> {
           ),
           isLastPage
               ? Container(
-                  height: screenSize.height * .2 - padding.bottom - padding.top,
+                  height: screenSize.height * .25  ,
                   padding: const EdgeInsets.all(15),
                   child: Center(
                     child: SizedBox(
@@ -106,7 +97,7 @@ class _IntroductionScreenState extends State<IntroductionScreen> {
                   ),
                 )
               : Container(
-                  height: screenSize.height * .2 - padding.bottom - padding.top,
+                  height: screenSize.height * .25   ,
                   padding: const EdgeInsets.all(15),
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,

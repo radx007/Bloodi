@@ -5,8 +5,8 @@ import 'package:flutter/services.dart';
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
   SystemChrome.setPreferredOrientations([
-      DeviceOrientation.portraitUp,
-    ]);
+    DeviceOrientation.portraitUp,
+  ]);
   runApp(const MyApp());
 }
 
@@ -24,22 +24,22 @@ class MyApp extends StatelessWidget {
           centerTitle: true,
           titleTextStyle: TextStyle(
             fontFamily: 'OpenSans',
-            fontWeight: FontWeight.bold,
-            fontSize: 25.0,
+            fontWeight: FontWeight.w600,
+            fontSize: 26.0,
             color: Colors.black,
           ),
         ),
         textTheme: const TextTheme(
           displayLarge: TextStyle(
             fontFamily: 'OpenSans',
-            fontWeight: FontWeight.bold,
-            fontSize: 25.0,
+            fontWeight: FontWeight.w600,
+            fontSize: 26.0,
             color: Colors.black,
           ),
           bodyLarge: TextStyle(
             fontFamily: 'OpenSans',
-            fontWeight: FontWeight.w700,
-            fontSize: 25.0,
+            fontWeight: FontWeight.w600,
+            fontSize: 22.0,
             color: Colors.black,
           ),
           bodyMedium: TextStyle(
@@ -50,16 +50,22 @@ class MyApp extends StatelessWidget {
           ),
           bodySmall: TextStyle(
             fontFamily: 'OpenSans',
-            fontWeight: FontWeight.w400,
-            fontSize: 15.0,
+            fontWeight: FontWeight.w600,
+            fontSize: 18.0,
             color: Color.fromARGB(255, 148, 148, 148),
           ),
           titleMedium: TextStyle(
             fontFamily: 'OpenSans',
-            fontSize: 15.0,
+            fontWeight: FontWeight.w100,
+            fontSize: 14.0,
             color: Colors.black,
           ),
-          
+          titleSmall: TextStyle(
+            fontFamily: 'OpenSans',
+            fontWeight: FontWeight.w100,
+            fontSize: 12.0,
+            color: Colors.black,
+          ),
         ),
         buttonTheme: const ButtonThemeData(
           buttonColor: Color(0xFFE60449),

@@ -22,12 +22,12 @@ class AuthChoiceScreen extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             Container(
-              height: screenSize.height * .8 - padding.bottom - padding.top,
+              height: screenSize.height * .75 + padding.bottom + padding.top,
               padding: EdgeInsets.only(
                 top: padding.top,
               ),
               child: const IntroductionPage(
-                imageUrl: 'assets/images/sign-in.svg',
+                imageUrl: 'assets/images/Sign-in.png',
                 title: "Welcome Bloodi:\nNearby City",
                 subTitle:
                     'Lorem Ipsum is simply dummy text of the printing and typesetting',
