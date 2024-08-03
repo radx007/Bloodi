@@ -59,7 +59,7 @@ class _AuthScreenState extends State<AuthScreen> {
                           textAlign: TextAlign.left,
                         ),
                       ),
-                      widget.authMode == AuthMode.logIn ? SignIn() : SignUp(),
+                      widget.authMode == AuthMode.logIn ? const SignIn() : const SignUp(),
                       const Padding(
                         padding: EdgeInsets.only(
                           top: 0,

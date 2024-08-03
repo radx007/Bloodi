@@ -3,7 +3,7 @@ import 'package:bloodi/widgets/Auth/custom_text_field.dart';
 import 'package:flutter/material.dart';
 
 class SignUp extends StatefulWidget {
-  SignUp({super.key});
+  const SignUp({super.key});
 
   @override
   State<SignUp> createState() => _SignUpState();

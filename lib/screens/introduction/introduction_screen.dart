@@ -25,7 +25,6 @@ class _IntroductionScreenState extends State<IntroductionScreen> {
   @override
   Widget build(BuildContext context) {
     final Size screenSize = MediaQuery.of(context).size;
-    final EdgeInsets padding = MediaQuery.of(context).padding;
 
     return Scaffold(
       backgroundColor: const Color.fromARGB(255, 220, 219, 219),

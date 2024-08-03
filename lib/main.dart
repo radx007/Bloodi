@@ -116,11 +116,11 @@ class MyApp extends StatelessWidget {
           onError: Colors.white,
           brightness: Brightness.dark,
         ).copyWith(
-          primary: Color(0xFFE60449),
+          primary: const Color(0xFFE60449),
           secondary: const Color(0xFFDEDEDE),
         ),
       ),
-      home: IntroductionScreen(),
+      home: const IntroductionScreen(),
     );
   }
 }

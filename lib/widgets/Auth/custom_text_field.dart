@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-class CustomTextField extends StatelessWidget {
+class CustomTextField extends StatefulWidget {
   final TextEditingController controller;
   final TextInputType? keyboardType;
   final bool? isObscureText;
@@ -18,16 +18,23 @@ class CustomTextField extends StatelessWidget {
   });
 
   @override
+  State<CustomTextField> createState() => _CustomTextFieldState();
+}
+
+class _CustomTextFieldState extends State<CustomTextField> {
+  bool _obscureText = true;
+  @override
   Widget build(BuildContext context) {
+    
     double height = MediaQuery.of(context).size.height;
     double width = MediaQuery.of(context).size.width;
     return Container(
       margin: const EdgeInsets.only(top: 10, bottom: 10),
       child: TextFormField(
-        controller: controller,
-        keyboardType: keyboardType,
-        obscureText: isObscureText!,
-        obscuringCharacter: obscureCharactere!,
+        obscureText: _obscureText,
+        controller: widget.controller,
+        keyboardType: widget.keyboardType,
+        obscuringCharacter: widget.obscureCharactere!,
         style: Theme.of(context).textTheme.titleMedium,
         decoration: InputDecoration(
           contentPadding: const EdgeInsets.all(15),
@@ -37,9 +44,21 @@ class CustomTextField extends StatelessWidget {
           ),
           filled: true,
           fillColor: Colors.white,
-          hintText: hintText,
+          hintText: widget.hintText,
           hintStyle: Theme.of(context).textTheme.bodySmall,
-          suffixIcon: suffixIcon,
+          suffixIcon: widget.hintText == 'Password'
+              ? IconButton(
+                  icon: Icon(
+                    _obscureText == true  ? Icons.visibility : Icons.visibility_off,
+                    color: Theme.of(context).primaryColor,
+                  ),
+                  onPressed: () {
+                    setState(() {
+                      _obscureText = !_obscureText;
+                    });
+                  },
+                )
+              : widget.suffixIcon,
           border: OutlineInputBorder(
             borderRadius: BorderRadius.circular(15),
             borderSide: const BorderSide(

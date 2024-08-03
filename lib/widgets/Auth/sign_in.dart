@@ -1,3 +1,4 @@
+import 'package:bloodi/screens/home_screen.dart';
 import 'package:bloodi/widgets/Auth/custom_text_field.dart';
 import 'package:flutter/material.dart';
 
@@ -19,6 +20,7 @@ class _SignInState extends State<SignIn> {
     'email': '',
     'password': '',
   };
+
   bool rememberMe = false;
 
   @override
@@ -89,8 +91,19 @@ class _SignInState extends State<SignIn> {
             ),
             ElevatedButton(
               onPressed: () {
-                print('You SIGNED IN');
-                print(rememberMe);
+                _authData['email'] = _emailController.text.trim();
+                _authData['password'] = _passWordController.text.trim();
+                if (_authData['email'] == 'admin' &&
+                    _authData['password'] == 'admin' &&
+                    rememberMe == true) {
+                  print('You SIGNED IN');
+                  Navigator.of(context).pushAndRemoveUntil(
+                    MaterialPageRoute(builder: (context) => HomeScreen()),
+                    (Route<dynamic> route) => false,
+                  );
+                } else {
+                  print('rejected');
+                }
               },
               child: const Text(
                 'Sign IN',
