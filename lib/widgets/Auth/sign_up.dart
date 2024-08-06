@@ -70,7 +70,7 @@ class _SignUpState extends State<SignUp> {
     "47. Ghardaïa",
     "48. Relizane",
     "49. Timimoun",
-    // "50. Bordj Badji Mokhtar",
+    "50. Bordj Badji Mokhtar",
     "51. Ouled Djellal",
     "52. Béni Abbès",
     "53. In Salah",

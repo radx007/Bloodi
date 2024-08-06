@@ -9,6 +9,11 @@ class HomeScreen extends StatelessWidget {
       appBar: AppBar(
         title: Text('Home'),
       ),
+      body: SingleChildScrollView(
+        child: Column(children: [
+          
+        ],),
+      ),
     );
   }
 }
